@@ -1,4 +1,4 @@
-weight = 4.8
+weight = 100
 
 # Ground Shipping
 if (weight <= 2):
@@ -27,3 +27,10 @@ else:
     droneCost = weight * 14.25
 
 print("Drone Cost: " + str(droneCost))
+
+if (groundCost < premium) and (groundCost < droneCost):
+    print("Ground cost is the cheapest method for " + str(weight) + " weight.")
+elif (premium < groundCost) and (premium < droneCost):
+    print("Premium cost is the cheapest method for " + str(weight) + " weight.")
+elif (droneCost < groundCost) and (droneCost < premium):
+    print("Drone cost is the cheapest method for " + str(weight) + " weight.")
